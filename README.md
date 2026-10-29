@@ -33,8 +33,7 @@ Antes de arreglar nada, comprueba qué falla. Prueba estas entradas y anota qué
 
 | Entrada | ¿Qué ocurre? |
 |---|---|
-| *(campo vacío)* |Se cierra la aplicación <img width="479" height="67" alt="image" src="https://github.com/user-attachments/assets/d58e30bb-a4c7-4954-a0b6-28b62e775071" />
- |
+| *(campo vacío)* |Se cierra la aplicación <img width="479" height="67" alt="image" src="https://github.com/user-attachments/assets/d58e30bb-a4c7-4954-a0b6-28b62e775071" />|
 | `abc` | |
 | `3.5` | |
 | `0` | |
