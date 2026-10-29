@@ -32,8 +32,8 @@ Al terminar sabrás:
 Antes de arreglar nada, comprueba qué falla. Prueba estas entradas y anota qué pasa:
 
 | Entrada | ¿Qué ocurre? |
-|---|---|
-| *(campo vacío)* |Se cierra la aplicación <img width="479" height="67" alt="image" src="https://github.com/user-attachments/assets/d58e30bb-a4c7-4954-a0b6-28b62e775071" />|
+|:---:|:---:|
+| *(campo vacío)* | Se cierra la aplicación<br><<img width="985" height="376" alt="Captura de pantalla 2026-10-29 174622" src="https://github.com/user-attachments/assets/4f935073-6d49-49d3-adc1-c23e6dbb20cc" />|
 | `abc` | |
 | `3.5` | |
 | `0` | |
