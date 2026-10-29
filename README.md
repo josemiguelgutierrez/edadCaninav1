@@ -41,7 +41,7 @@ Antes de arreglar nada, comprueba qué falla. Prueba estas entradas y anota qué
 | `99999999999` |Se cierra la aplicación, ya que supera el rango de "int"<br><img width="560" height="78" alt="image" src="https://github.com/user-attachments/assets/10041537-3eb2-4558-b9e3-c456921d030c"/>|
 | `400000000` |No se cierra pero el resultado que da es muy absurdo<br><img width="352" height="205" alt="image" src="https://github.com/user-attachments/assets/4c0d8c65-bd20-4cdd-b2f4-018f5c6559e9"/>|
 
-> 💡 Cuando la app se cierre, abre el **Logcat** y busca la excepción. ¿Qué método la lanza? ¿Por qué el último caso no cierra la app pero da un resultado absurdo?
+> 💡 Cuando la app se cierre, abre el **Logcat** y busca la excepción. ¿Qué método la lanza? ¿Por qué el último caso no cierra la app pero da un resultado absurdo?<
 La excepción es "**NumberFormatException**".
 El método que lanza es "**at java.lang.Integer.parseInt**".
 No cierra la aplicación porque 400000000 sí cabe en un int y entonces lo utiliza sin problema. Y da un resultado absurdo, porque en la multiplicación por 7 el resultado supera el valor máximo de int. Java no avisa con ninguna excepción, simplemente el número da la vuelta y sale negativo.
