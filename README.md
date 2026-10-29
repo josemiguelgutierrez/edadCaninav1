@@ -43,8 +43,8 @@ Antes de arreglar nada, comprueba qué falla. Prueba estas entradas y anota qué
 
 > 💡 Cuando la app se cierre, abre el **Logcat** y busca la excepción. ¿Qué método la lanza? ¿Por qué el último caso no cierra la app pero da un resultado absurdo?
 
-La excepción es "**NumberFormatException**".
-El método que lanza es "**at java.lang.Integer.parseInt**".
+La excepción es "**NumberFormatException**".<br>
+El método que lanza es "**at java.lang.Integer.parseInt**".<br>
 No cierra la aplicación porque 400000000 sí cabe en un int y entonces lo utiliza sin problema. Y da un resultado absurdo, porque en la multiplicación por 7 el resultado supera el valor máximo de int. Java no avisa con ninguna excepción, simplemente el número da la vuelta y sale negativo.
 
 ## Paso 2 · Crea la rama de trabajo
