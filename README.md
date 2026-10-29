@@ -33,7 +33,8 @@ Antes de arreglar nada, comprueba qué falla. Prueba estas entradas y anota qué
 
 | Entrada | ¿Qué ocurre? |
 |:---:|:---:|
-| *(campo vacío)* | Se cierra la aplicación<br><img src=""C:\Users\Usuario\Pictures\Screenshots\Captura de pantalla 2026-10-29 174513.png"" width="400"> |
+| *(campo vacío)* | Se cierra la aplicación<br><<img width="479" height="67" alt="Captura de pantalla 2026-10-29 174513" src="https://github.com/user-attachments/assets/f186a1d8-faf9-41b1-bd9d-4527613e4ef9" />
+> |
 | `abc` | |
 | `3.5` | |
 | `0` | |
