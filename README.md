@@ -77,6 +77,8 @@ En `res/values/strings.xml` añade tres textos nuevos:
 
 > ❓ ¿Qué significan `%1$d` y `%2$d`? ¿En qué orden se rellenan?
 
+Son huecos que se rellenan desde Java con números enteros. El número indica el orden: `%1$d` se rellena con el primer valor que se pasa a `getString()` y `%2$d` con el segundo. En este caso, con EDAD_MINIMA (1) y EDAD_MAXIMA (30).
+
 ## Paso 5 · Restringe la entrada desde el layout
 
 En el `EditText` (`@+id/age_input`) añade:
@@ -127,6 +129,8 @@ resultText = findViewById(R.id.result_text);
 
 > ❓ ¿Qué pasaría si dejaras `EditText ageEdit = findViewById(...)` dentro de `onCreate()`?
 
+Se crearía una variable local nueva con el mismo nombre que el que se declara fuera de onCreate(), y eso hace que tape a la variable de fuera del onCreate(). Entonces la variable de fuera se queda a null, y cuando se use desde otro método, como calcularEdad(), la app se cerraría.
+
 ## Paso 8 · Saca la lógica del botón a un método
 
 El `setOnClickListener` debe quedar así de corto:
@@ -162,6 +166,8 @@ Implementa el método siguiendo este orden. En cuanto algo falle, llama a `mostr
 
 > ❓ ¿Por qué limitar la edad a 30 evita también el desbordamiento que viste en el Paso 1?
 
+Porque se comprueba el rango de edad antes de hacer la multiplicación, entonces si el número está fuera del rango muestra un error y se sale del método con return, y al estar dentro del rango al hacer la multiplicación el máximo valor que pueda tener int con un valor que esté dentro del rango es de 210 que es bastante pequeño comparado con el valor máximo que puede tener int. 
+
 ## Paso 11 · Vuelve a probar
 
 Comprueba que **la app nunca se cierra**:
@@ -175,6 +181,8 @@ Comprueba que **la app nunca se cierra**:
 | `30` | "Si tu perro fuera humano tendría 210 años" |
 
 > 💡 Con el teclado numérico no puedes escribir `abc` ni `-4`. ¿Cómo comprobarías que el `try/catch` funciona? (Pista: quita `inputType` un momento.)
+
+Quitando un momento `android:inputType="number"` del EditText para que se puedan escribir letras. Cuando escribamos las letras se lanzará una excepción y se mostrará el mensaje que pusimos del error y la aplicación no se cerrará.
 
 ## Paso 12 · Guarda y sube tu trabajo
 
